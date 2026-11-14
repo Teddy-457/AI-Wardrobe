@@ -1,0 +1,22 @@
+Uploaded image
+    |
+    v
+Pillow
+- Validate file
+- Correct EXIF orientation
+- Convert to RGB
+- Resize
+- Strip metadata
+    |
+    v
+Qwen3-VL through Ollama
+- Identify garment
+- Infer category, pattern, style
+- Return JSON
+    |
+    v
+Application validation
+- Validate with Pydantic
+- Normalize labels
+- Apply weather/season rules
+- Store the result
