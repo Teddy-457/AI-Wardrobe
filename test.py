@@ -1,3 +1,5 @@
+"""Analyze clothing images with a locally running Ollama model."""
+
 from pathlib import Path
 
 from ollama import ResponseError, chat
@@ -7,8 +9,9 @@ from clothing_attributes import ClothingAttributes
 MODEL_NAME = "qwen2.5vl:7b"
 NUM_PREDICT = 1024
 print(f"\n num_predict: {NUM_PREDICT} \n ")
-IMAGE_PATH = Path(r"C:\Users\Eho\Desktop\Images & Videos\A47500020-front-pdp-ld-79808908.jpg")
-#IMAGE_PATH = Path(r"C:\Users\Eho\Desktop\Images & Videos\170937883610ad49462fba275b0348309c008893e8_thumbnail_900x-3779182027.jpg")
+IMAGE_PATH = Path(
+    r"C:\Users\Eho\Desktop\Images & Videos\A47500020-front-pdp-ld-79808908.jpg"
+)
 
 
 def analyze_clothing_image(image_path: Path) -> ClothingAttributes:
@@ -60,7 +63,9 @@ Rules:
         )
 
     try:
-        attributes = ClothingAttributes.model_validate_json(response.message.content)
+        clothing_attributes = ClothingAttributes.model_validate_json(
+            response.message.content
+        )
     except ValueError as error:
         raise RuntimeError(
             "The model returned invalid or truncated JSON. "
@@ -77,7 +82,7 @@ Rules:
         f"total={prompt_tokens + generated_tokens}"
     )
 
-    return attributes
+    return clothing_attributes
 
 
 if __name__ == "__main__":

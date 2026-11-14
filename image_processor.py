@@ -1,1 +1,1 @@
-#Pillow workflow
+"""Image-processing workflow placeholder."""
