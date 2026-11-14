@@ -2,3 +2,8 @@ dev-resources/
 .github/
 .venv/
 __pycache__/
+*.py[cod]
+.env
+.vscode/
+storage/clothing_images/*
+!storage/clothing_images/.gitkeep
