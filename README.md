@@ -1,3 +1,5 @@
+[![Pylint](https://github.com/Teddy-457/AI-Wardrobe/actions/workflows/pylint.yml/badge.svg)](https://github.com/Teddy-457/AI-Wardrobe/actions/workflows/pylint.yml)
+
 AI Wardrobe – Интелигентен виртуален гардероб и система за препоръчване на облекла
 
 AI Wardrobe е приложение, базирано на изкуствен интелект, което помага на потребителите да организират дрехите си и да създават персонализирани комбинации от облекла (outfits) според наличния си гардероб, метеорологичните условия, предпочитания стил и избрания повод.
